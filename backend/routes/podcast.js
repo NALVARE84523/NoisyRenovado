@@ -1,10 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const {
-    Usuario
-} = require("../model/usuario");
-
-const Podcast = require("../model/podcast");
+const { Usuario } = require("../model/usuario");
+const { Podcast } = require("../model/podcast");
+const auth = require("../middleware/auth");
+const cargarPodcast = require("../middleware/newPodcast");
 
 //CRUD
 
@@ -72,7 +71,7 @@ router.put("/", auth, async (req, res) => {
     if (!podcast) return res.status(400).send("Este podcast no existe, revisa los datos o es posible que haya sido eliminado");  
     res.status(200).send(podcast);
   });
-
+//delete
 router.delete("/:_id", auth, async (req, res) => {
     
     const usuario = await Usuario.findById(req.usuario._id); 
