@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const { Usuario } = require("../model/usuario");
-
 const { Podcast } = require("../model/podcast");
+const auth = require("../middleware/auth");
+const cargarPodcast = require("../middleware/newPodcast");
 
 //CRUD
 
