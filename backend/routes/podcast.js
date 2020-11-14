@@ -1,10 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const {
-    Usuario
-} = require("../model/usuario");
+const { Usuario } = require("../model/usuario");
 
-const Podcast = require("../model/podcast");
+const { Podcast } = require("../model/podcast");
 
 //CRUD
 
