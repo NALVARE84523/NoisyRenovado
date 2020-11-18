@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+body, html{
+
+    background-color: black;
+    color: white;
+
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+
+/* formateando de imagen*/
+
+.avatar{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    }
+   /*modificacion a colores, letra y fondo de la nav bar*/
+.bg-black{
+    background-color: black;
+}
+a .navbar-brand{
+color: white;
+font-size: 20px;
+font-family: 'Gothic A1', sans-serif;
+font-weight: 900;
+
+}
