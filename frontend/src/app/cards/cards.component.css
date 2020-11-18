@@ -1,0 +1,145 @@
+body, html{
+
+    background-color: black;
+    color: white;
+  
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;    
+  }
+   
+ 
+   /*modificacion a colores, letra y fondo de la nav bar*/
+  .bg-black{
+    background-color: black;
+  }
+    
+  .btn {
+    margin-right: 3px;
+    margin-left: 3px;
+    
+  }
+  
+  .btn, .media-title, .tag-title {
+  font-family: 'Gothic A1', sans-serif;
+    font-weight: 800;
+  }
+  
+  .p, .media-info {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  }
+  /*modificacion de clase button warning de bootstrap por blanca*/
+  .btn-outline-warning {
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+  
+  .btn-outline-warning:hover {
+    color: #212529;
+    background-color: #ffd720;
+    border-color: #ffd720;
+  }
+  
+  .btn-outline-warning:focus, .btn-outline-warning.focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
+  }
+  
+  
+  /*modificacion de clase button para generar uno sin borde*/
+  .btn-inv-warning {
+  color: rgb(70, 70, 70);
+  border-color: rgb(27, 27, 27)
+  }
+  
+  .btn-inv-warning:hover {
+  color: #212529;
+  background-color: #ffd720;
+  border-color: #ffd720;
+  }
+  
+  .btn-inv-warning:focus, .btn-inv-warning.focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
+  }
+  
+  
+  /*modificacion de clase button para generar un boton tag para las medias cards mas pequeño*/
+  .btn-tag-sm {
+  color: #444;
+  border-color: rgb(27, 27, 27);
+  font-size: 14px;
+  }
+  .btn-tag-sm:hover {
+  color: #ffffff;
+  background-color: #444;
+  border-color: #444;
+  }
+  
+  .btn-tag-sm:focus, .btn-tag-sm.focus {
+  box-shadow: 0 0 0 0.2rem #ffd720;
+  }
+  
+  
+  /*boton para tag media cards*/
+  .btn-tag-sm2 {
+  color: #444;
+  border-color: rgb(27, 27, 27);
+  font-size: 14px;
+  }
+  .btn-tag-sm2:hover {
+  color: #444;
+  background-color: #444;
+  border-color: #444;
+  }
+  
+  .btn-tag-sm2:focus, .btn-tag-sm2.focus {
+  box-shadow: 0 0 0 0.2rem #444;
+  }
+  .btn-tag-sm2.disabled, .btn-tag-sm2:disabled {
+  color: #444;
+  background-color: transparent;
+  }
+  
+  /*containers*/
+  .hosts-container .hosts-content {
+  display: flex;
+  flex-wrap: wrap;  
+  }
+  .hosts-content{ 
+  background-color: rgb(27, 27, 27);
+  border-radius: 12px;
+  }
+  .hosts-container .hosts-align-center .hosts-content {
+  justify-content: center;
+  }
+  
+  .hosts-container .hosts-align-right .hosts-content {
+  justify-content: right;
+  }
+  
+  .hosts-container .hosts-content .host {
+  background: #ffffff;
+  width: 31%;
+  color: #444;
+  text-align: center;
+  margin-bottom: 3.5%;
+  margin-right: 3.5%;
+  }
+  .hosts-container .hosts-content .host .host-inner {
+  padding: 32px;
+  }
+  
+  
+  .dropdown-divider-dark {
+  height: 0;
+  margin: 0.5rem 0;
+  overflow: hidden;
+  border-top: 1px solid #444;
+  }
+  
+  .avatar {
+  height: 40px;
+  width: 40px;
+  margin: 1px;
+  }

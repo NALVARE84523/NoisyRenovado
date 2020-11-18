@@ -1,0 +1,67 @@
+.btn {
+    margin-right: 3px;
+    margin-left: 3px;
+    
+}
+
+.btn, .media-title, .tag-title {
+  font-family: 'Gothic A1', sans-serif;
+    font-weight: 800;
+}
+
+.p, .media-info {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+/*modificacion de clase button para generar uno sin borde para el tag*/
+.btn-tag-warning {
+  color: #ffffff;
+  border-color: rgb(27, 27, 27);
+}
+.btn-tag-warning:hover {
+  color: #ffffff;
+  background-color: #444;
+  border-color: #444;
+}
+
+.btn-tag-warning:focus, .btn-inv-warning.focus {
+  box-shadow: 0 0 0 0.2rem #ffd720;
+}
+
+/*containers*/
+.hosts-container .hosts-content {
+  display: flex;
+  flex-wrap: wrap;  
+}
+.hosts-content{ 
+  background-color: rgb(27, 27, 27);
+  border-radius: 12px;
+}
+.hosts-container .hosts-align-center .hosts-content {
+  justify-content: center;
+}
+
+.hosts-container .hosts-align-right .hosts-content {
+  justify-content: right;
+}
+
+.hosts-container .hosts-content .host {
+  background: #ffffff;
+  width: 31%;
+  color: #444;
+  text-align: center;
+  margin-bottom: 3.5%;
+  margin-right: 3.5%;
+}
+.hosts-container .hosts-content .host .host-inner {
+  padding: 32px;
+}
+
+
+.dropdown-divider-dark {
+  height: 0;
+  margin: 0.5rem 0;
+  overflow: hidden;
+  border-top: 1px solid #444;
+}
