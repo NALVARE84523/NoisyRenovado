@@ -22,10 +22,10 @@ const cargarPodcast = multer({
   fileFilter: (req, file, cb) => {
     
     if (
-      file.mimetype =="image/png" ||
-      file.mimetype ==  "image/jpeg" ||
-      file.mimetype ==  "image/jpg" ||
-      file.mimetype ==  "image/gif"
+      file.mimetype =="audio/mpeg" ||
+      file.mimetype == "audio/wav" ||
+      file.mimetype == "audio/aac" ||
+      file.mimetype == "audio/ogg" 
     ) {
       cb(null, true);
     } else {
