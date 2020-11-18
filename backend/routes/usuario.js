@@ -13,7 +13,7 @@ router.post("/", async(req, res)=>{
         nombreUsuario: req.body.nombreUsuario,
         correo: req.body.correo,
         password: req.body.password,
-    })
+    });
 
     const result = await usuario.save();
     const jwtToken = usuario.generateJWT();
