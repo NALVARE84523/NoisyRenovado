@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-
 export class AuthService {
 
   private registrourl = 'http://localhost:3005/api/usuario/';
