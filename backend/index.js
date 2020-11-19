@@ -12,6 +12,7 @@ app.use(express.json());
 app.use("/api/usuario/", usuario);
 app.use("/api/auth", auth);
 app.use("/api/podcast/", podcast);
+app.use('/public', express.static('public'));
 
 const port = process.env.PORT || 3005;
 app.listen(port, () => console.log("Ejecutando en puerto: " + port));

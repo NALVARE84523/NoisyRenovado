@@ -1,13 +1,19 @@
 const multer = require("multer");
 
-const directorio = "./public/";
+var directorio = "./public/";
+
+function nombreArchivo(nombre){
+  console.log(nombre);
+  if(nombre.endsWith(".jpg") || nombre.endsWith(".jpeg") || nombre.endsWith(".png") || nombre.endsWith(".gif")){
+      directorio += "images/";
+}
+if(nombre.endsWith(".mp3")){
+  directorio += "audio/";
+}
+console.log('Funcion' + directorio);
+}
 
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-  
-    cb(null, directorio);
-  },
-  //nombre del archivo
   filename: (req, file, cb) => {
 
     const filename =
@@ -15,17 +21,25 @@ const storage = multer.diskStorage({
 
       cb(null, filename);
   },
+  destination: (req, file, cb) => {
+  console.log('Destino: ' + directorio);
+    cb(null, directorio);
+  },
+  //nombre del archivo
+
 });
 
 const cargarPodcast = multer({
   storage: storage,
   fileFilter: (req, file, cb) => {
-    
+    nombreArchivo(file.originalname);
     if (
       file.mimetype =="audio/mpeg" ||
       file.mimetype == "audio/wav" ||
       file.mimetype == "audio/aac" ||
-      file.mimetype == "audio/ogg" 
+      file.mimetype == "image/jpg" ||
+      file.mimetype == "image/jpeg" ||
+      file.mimetype == "image/png"
     ) {
       cb(null, true);
     } else {
