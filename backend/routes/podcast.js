@@ -40,12 +40,15 @@ router.post("/cargarPodcast", cargarPodcast.single("audio") , auth, async(req, r
 
   if(!usuario) return res.status(400).send("El usuario no existe");
 
-  let rutaAudio = null;
-  if(req.file.filename){
-    rutaAudio = url + "/public/" + req.file.filename;
-  }else{
-    rutaAudio = null;
+  let rutaAudio = url + "/public/";
+  if(req.file.filename.endsWith(".jpg") || req.file.filename.endsWith(".jpeg") || req.file.filename.endsWith(".png") || req.file.filename.endsWith(".gif")){
+        rutaAudio += "images/" + req.file.filename;
   }
+  if(req.file.filename.endsWith(".mp3")){
+    rutaAudio += "audio/" + req.file.filename;
+  }
+
+
   const podcast = new Podcast({
     idUsuario: usuario._id,
     nombre: req.body.nombre,
