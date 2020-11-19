@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {  Usuario } from '../../model/usuario.model';
 @Injectable({
   providedIn: 'root'
 })
@@ -9,11 +10,11 @@ export class AuthService {
   private loginurl = 'http://localhost:3005/api/auth/';
   constructor( private http: HttpClient) { }
 
-  registroUsuario(usuario){
-    return this.http.post<any>(this.registrourl, usuario);
+  registroUsuario(usuario : Usuario){
+    return this.http.post<Usuario>(this.registrourl, usuario);
   }
-  loginUsuario(usuario){
-    return this.http.post<any>(this.loginurl, usuario);
+  loginUsuario(usuario: Usuario){
+    return this.http.post<Usuario>(this.loginurl, usuario);
   }
 loginOn(){
   return !!localStorage.getItem('token');

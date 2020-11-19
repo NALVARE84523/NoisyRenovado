@@ -10,7 +10,9 @@ import {Router} from '@angular/router';
 export class LoginComponent implements OnInit {
 
   constructor(private auth: AuthService, private router: Router) { }
-  loguear= {
+  ngOnInit(): void {
+  }
+  /*loguear= {
     correo:'',
     pass:'',
   }
@@ -26,6 +28,6 @@ export class LoginComponent implements OnInit {
       },
       (err)=> console.log(err)
     );
-  }
+  }*/
 
 }

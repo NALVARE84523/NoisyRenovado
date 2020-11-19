@@ -30,7 +30,7 @@ const cargarPodcast = multer({
       cb(null, true);
     } else {
       cb(null, false);
-      return cb(new Error("Solo aceptamos imagenes en jpg/jpeg/, png y gif"));
+      return cb(new Error("Solo aceptamos arichos de audio"));
     }
   },
 });

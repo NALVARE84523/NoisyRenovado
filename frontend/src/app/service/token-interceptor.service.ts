@@ -9,7 +9,7 @@ export class TokenInterceptorService implements HttpInterceptor{
 
   constructor(private auth: AuthService) { }
 
-  intercept(req, next) {
+  intercept(req: any, next: any) {
     console.log (this.auth.obtenerToken());
     const tokenReq = req.clone({
        setHeaders:{
