@@ -8,6 +8,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { CardsComponent } from './cards/cards.component';
+import { ReproductorComponent } from './reproductor/reproductor.component';
 
 const routes: Routes = [
   {
@@ -45,6 +46,10 @@ const routes: Routes = [
   {
     path:'footer',
     component:FooterComponent,
+  },
+  {
+    path:'reproductor',
+    component:ReproductorComponent,
   },
 ];
 

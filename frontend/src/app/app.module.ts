@@ -14,6 +14,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthService } from './service/auth.service';
 import { AuthGuard } from './guard/auth.guard';
 import { TokenInterceptorService } from './service/token-interceptor.service';
+import { ReproductorComponent } from './reproductor/reproductor.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TokenInterceptorService } from './service/token-interceptor.service';
     SignupComponent,
     HomeComponent,
     ProfileComponent,
-    CardsComponent
+    CardsComponent,
+    ReproductorComponent
   ],
   imports: [
     BrowserModule,
